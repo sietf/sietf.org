@@ -1,0 +1,43 @@
+<!-- $Id: user_menu.html,v 1.2 2007/08/08 04:50:13 angelside Exp $ //-->
+
+<div class="forabg">
+<span class="corners-top"><span></span></span>
+<h4 class="umenu"><span>{L_USER_MENU}</span></h4><br />
+    <div align="center">
+	<span style="font-size:1.1em;">
+                	<!-- IF USER_COLOR -->
+                    	<span style="color: {USER_COLOR}; font-weight: bold;">
+                    <!-- ELSE -->
+                    	<span>
+                    <!-- ENDIF -->
+                    {USERNAME}
+     					</span><br /><br />
+				<a href="{U_PROFILE}">
+                <!-- IF AVATAR_IMG -->
+                {AVATAR_IMG}
+                <!-- ELSE --><img src="{T_THEME_PATH}/images/no_avatar.gif" alt="" /><!-- ENDIF --></a>
+				<!-- IF RANK_TITLE --><br /><small style="color:#FF9900">{RANK_TITLE}</small><!-- ENDIF -->
+				<!-- IF RANK_IMG --><br />{RANK_IMG}<!-- ENDIF --><br /></div>
+            <ul id="nav-umenu">
+			<!-- IF S_DISPLAY_PM --> 
+            <li><a href="{U_PRIVATEMSGS}">{PRIVATE_MESSAGE_INFO}</a></li>
+            <!-- ENDIF -->
+            <!-- IF S_INC_UNREAD_LINK -->
+    			<!-- IF S_EXISTS_UNREADS -->
+        			<li><a href="{U_SEARCH_UNREAD}">{L_VIEW_UNREADS}</a></li>
+        		<!-- ELSE -->
+        			<li><a href="{U_SEARCH_UNREAD}">{L_NO_UNREADS}</a></li>
+        		<!-- ENDIF -->
+    		<!-- ENDIF -->
+			<li><a href="{U_NEW_POSTS}">{L_NEW_POSTS}</a></li>
+			<li><a href="{U_SELF_POSTS}">{L_SELF_POSTS}</a><br /></li>
+            <!-- IF U_ACP -->
+			<li style="height:25px"><a href="{U_ACP}">{L_ACP}</a></li>
+			<!-- ENDIF -->
+			<li><a href="{U_UM_BOOKMARKS}">{L_UM_BOOKMARKS}</a></li>
+			<li><a href="{U_UM_MAIN_SUBSCRIBED}">{L_UM_MAIN_SUBSCRIBED}</a></li>
+			<li><a href="{U_LOGIN_LOGOUT}">{L_LOGIN_LOGOUT}</a></li>
+            </ul>
+	</span>
+<span class="corners-bottom"><span></span></span>
+</div>

@@ -1,0 +1,33 @@
+<!-- INCLUDE overall_header.html -->
+
+<h2>{L_CUSTOM_SYNDICATION_TITLE}</h2>
+<form method="post" action="{S_ACTION}">
+<div class="panel">
+	<div class="inner"><span class="corners-top"><span></span></span>
+		<fieldset>
+		<dl>
+			<dt><label for="forum">{L_SELECT_FORUMS}:</label><br /><span>{L_SELECT_FORUMS_EXPLAIN}</span></dt>
+			<dd><select id="forum" name="forum_id[]" multiple="multiple" size="10">{S_FORUM_OPTIONS}</select></dd>
+			<dd><input type="checkbox" class="radio" name="all_forums" value="1" />&nbsp; {L_ALL_FORUMS}</dd>
+		</dl>
+		<dl>
+			<dt><label for="content_posts">{L_TOPICS_OR_POSTS}:</label><br /><span>{L_TOPICS_OR_POSTS_EXPLAIN}</span></dt>
+			<dd>
+				<label for="content_topics"><input type="radio" name="content" id="content_topics" value="topics" checked="checked" /> {L_TOPICS}</label>
+				<label for="content_posts"><input type="radio" name="content" id="content_posts" value="posts" /> {L_POSTS}</label>
+			</dd>
+		</dl>
+		<dl>
+			<dt><label for="number_items">{L_NUMBER_ITEMS}:</label><br /><span>{L_SYNDICATION_ADMIN_LIMIT}</span></dt>
+			<dd><input type="text" name="number_items" id="number_items" value="{NUMBER_ITEMS}" size="2" maxlength="2" /></dd>
+		</dl>
+		</fieldset>
+
+		<fieldset class="submit-buttons">
+			<input type="reset" value="{L_RESET}" name="reset" class="button2" />&nbsp;<input type="submit" name="submit" value="{L_SUBMIT}" class="button1" />
+		</fieldset>
+	<span class="corners-bottom"><span></span></span></div>
+</div>
+</form>
+
+<!-- INCLUDE overall_footer.html -->

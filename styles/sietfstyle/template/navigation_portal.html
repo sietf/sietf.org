@@ -1,0 +1,27 @@
+<div class="menunav">
+	<ul>
+		<li><a href="http://www.sietf.org" title="Portal">Portal</a></li>
+		<li><a href="{U_INDEX}" title="Forum"><span>Forum</span></a></li>
+        <li><a href="http://si.etf.rs" title="sietf official"><span>SI.ETF</span></a></li>
+        <!-- IF S_USER_LOGGED_IN -->
+        <li><a href="http://www.sietf.org/viewforum.php?f=36" title="Study Materials"><span>Materials</span></a></li>
+        <li><a href="http://calendar.sietf.org" title="Calendar"><span>Calendar</span></a></li>
+        <li><a href="http://webmail.sietf.org" title="sietf Mail"><span>SIETF MAIL</span></a></li>
+        <!-- ENDIF -->
+        
+		<!-- IF not S_IS_BOT -->
+			<!-- IF S_DISPLAY_MEMBERLIST -->
+           		<li><a href="{U_MEMBERLIST}" title="{L_MEMBERLIST_EXPLAIN}"><span>{L_MEMBERLIST}</span></a></li>		
+            <!-- ENDIF -->
+			<!-- IF not S_USER_LOGGED_IN -->
+            	<li><a href="{U_REGISTER}"><span>{L_REGISTER}</span></a></li>
+            <!-- ENDIF -->	
+            <!-- IF S_USER_LOGGED_IN -->
+            <!-- IF S_SYNDICATION_ENABLED -->
+            	<li><a href="{U_SYNDICATION}" title="{L_SYNDICATION}"><span>Feeds</span></a></li>
+				<li><a href="{U_LOGIN_LOGOUT}" title="{L_LOGIN_LOGOUT}" accesskey="l"><span>{L_LOGIN_LOGOUT}</span></a></li>
+            <!-- ENDIF -->
+            <!-- ENDIF -->
+		<!-- ENDIF -->	
+	</ul>
+</div>

@@ -1,0 +1,19 @@
+{HEADER}
+<rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/">
+	<channel>
+		<title>{TITLE}</title>
+		<description>{DESCRIPTION}</description>
+		<link>{LINK}</link>
+		<lastBuildDate>{LAST_BUILD}</lastBuildDate>
+		<!-- BEGIN item -->
+		<item>
+			<dc:creator>{item.AUTHOR}</dc:creator>
+			<pubDate>{item.TIME}</pubDate>
+			<guid>{item.IDENTIFIER}</guid>
+			<link>{item.LINK}</link>
+			<title>{item.TITLE}</title>
+			<description>{item.TEXT}</description>
+		</item>
+		<!-- END item -->
+	</channel>
+</rss>

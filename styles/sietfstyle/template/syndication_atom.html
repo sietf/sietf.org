@@ -1,0 +1,25 @@
+{HEADER}
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>{TITLE}</title>
+  <subtitle>{DESCRIPTION}</subtitle>
+  <link href="{LINK}" />
+  <updated>{LAST_BUILD}</updated>
+  <id>{LINK}</id>
+  <link rel="self" href="{FEED_LINK}" />
+
+	<!-- BEGIN item -->
+		<entry>
+			<title>{item.TITLE}</title>
+			<link href="{item.LINK}"/>
+			<id>{item.IDENTIFIER}</id>
+			<author>
+				<name>{item.AUTHOR}</name>
+			</author>
+			<published>{item.TIME}</published>
+			<updated>{item.TIME}</updated>
+			<summary type="xhtml">
+				<div xmlns="http://www.w3.org/1999/xhtml">{item.TEXT}</div>
+			</summary>
+		</entry>
+	<!-- END item -->
+</feed>

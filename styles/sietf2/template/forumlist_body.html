@@ -1,0 +1,99 @@
+<!-- BEGIN forumrow -->
+	<!-- IF (forumrow.S_IS_CAT and not forumrow.S_FIRST_ROW) or forumrow.S_NO_CAT -->
+		</table><br />
+	<!-- ENDIF -->
+
+	<!-- IF forumrow.S_IS_CAT or forumrow.S_FIRST_ROW or forumrow.S_NO_CAT -->
+		<table class="tablebg" cellspacing="{$CA_SPACING}" width="100%">
+		
+		<tr>
+			<th colspan="2">&nbsp;{forumrow.FORUM_NAME}&nbsp;</th>
+			<th width="50">&nbsp;{L_TOPICS}&nbsp;</th>
+			<th width="50">&nbsp;{L_POSTS}&nbsp;</th>
+			<th width="175">&nbsp;{L_LAST_POST}&nbsp;</th>
+
+
+
+		</tr>
+	<!-- ENDIF -->
+	
+	<!-- IF not forumrow.S_IS_CAT -->
+		<!-- IF forumrow.S_IS_LINK -->
+			<tr>
+				<td class="row1" width="31" align="center">{forumrow.FORUM_FOLDER_IMG}</td>
+				<td class="row1">
+					<!-- IF forumrow.FORUM_IMAGE -->
+						<table border="0" cellspacing="0" cellpadding="0" width="100%"><tr><td align="middle" style="padding-{S_CONTENT_FLOW_END}: 5px;">{forumrow.FORUM_IMAGE}</td><td width="100%" valign="middle">
+					<!-- ENDIF -->
+					<a class="forumlink" href="{forumrow.U_VIEWFORUM}">{forumrow.FORUM_NAME}</a>
+					<p class="forumdesc">{forumrow.FORUM_DESC}</p>
+					<!-- IF forumrow.FORUM_IMAGE --></td></tr></table><!-- ENDIF -->
+				</td>
+				<!-- IF forumrow.CLICKS -->
+					<td class="row2" colspan="3" align="center"><span class="genmed">{L_REDIRECTS}: {forumrow.CLICKS}</span></td>
+				<!-- ELSE -->
+					<td class="row2" colspan="3" align="center">&nbsp;</td>
+				<!-- ENDIF -->
+			</tr>
+		<!-- ELSE -->
+		<tr>
+			<td class="row1" width="31" align="center">{forumrow.FORUM_FOLDER_IMG}</td>
+			<td class="row1">
+				<!-- IF forumrow.FORUM_IMAGE -->
+					<table border="0" cellspacing="0" cellpadding="0" width="100%"><tr><td align="middle" style="padding-{S_CONTENT_FLOW_END}: 5px;">{forumrow.FORUM_IMAGE}</td><td width="100%" valign="middle">
+				<!-- ENDIF -->
+				<a class="forumlink<!-- IF forumrow.S_UNREAD_FORUM --> link-new<!-- ENDIF -->" href="{forumrow.U_VIEWFORUM}">{forumrow.FORUM_NAME}</a>
+				<p class="forumdesc">{forumrow.FORUM_DESC}</p>
+				<!-- IF forumrow.MODERATORS -->
+					<p class="forumdesc"><strong>{forumrow.L_MODERATOR_STR}:</strong> {forumrow.MODERATORS}</p>
+				<!-- ENDIF -->
+				<!-- IF forumrow.SUBFORUMS -->
+					<p class="forumdesc"><strong>{forumrow.L_SUBFORUM_STR}</strong> {forumrow.SUBFORUMS}</p>
+				<!-- ENDIF -->
+				<!-- IF forumrow.FORUM_IMAGE --></td></tr></table><!-- ENDIF -->
+			</td>
+			<td class="row2" align="center"><p class="topicdetails">{forumrow.TOPICS}</p></td>
+			<td class="row2" align="center"><p class="topicdetails">{forumrow.POSTS}</p></td>
+			<td class="row2" align="center" nowrap="nowrap">
+				<!-- IF forumrow.LAST_POST_TIME -->
+
+			
+
+<p class="topicdetails">{forumrow.LAST_POST_TIME}</p>
+
+	<p class="topicdetails"><!-- IF forumrow.LAST_TOPIC_TITLE_SUBSTR --><a href="{forumrow.U_LAST_TOPIC}" title="{forumrow.LAST_TOPIC_TITLE}">{forumrow.LAST_TOPIC_TITLE_SUBSTR}</a><!-- ELSE IF forumrow.LAST_POST_SUBJECT_SUBSTR --><a href="{forumrow.U_LAST_POST}" title="{forumrow.LAST_POST_SUBJECT}">{forumrow.LAST_POST_SUBJECT_SUBSTR}</a><!-- ENDIF --></p>
+
+
+					<p class="topicdetails">{forumrow.LAST_POSTER_FULL}
+						<a href="{forumrow.U_LAST_POST}">{LAST_POST_IMG}</a>
+					</p>
+				<!-- ELSE -->
+					<p class="topicdetails">{L_NO_POSTS}</p>
+				<!-- ENDIF -->
+			</td>
+		</tr>
+		<!-- ENDIF -->
+	<!-- ENDIF -->
+	
+
+
+
+<!-- IF forumrow.S_LAST_ROW -->
+		<!-- IF not S_IS_BOT and U_MARK_FORUMS -->
+		
+		<!-- ENDIF -->
+
+
+
+
+
+		</table>
+	<!-- ENDIF -->
+<!-- BEGINELSE -->
+<table class="tablebg" cellspacing="{$CA_SPACING}" width="100%">
+{$CA_CAP_START}{L_MESSAGE}{$CA_CAP_END}
+<tr>
+	<td class="row1" colspan="5" align="center" style="padding: 25px 5px;"><p class="gensmall">{L_NO_FORUMS}</p></td>
+</tr>
+</table>
+<!-- END forumrow -->

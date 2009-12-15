@@ -1,0 +1,56 @@
+<div style="float:left; width:auto; position:relative; top:-12px">
+			<ul class="linklist navlinks">
+				<li class="icon-home"><a href="{U_INDEX}" accesskey="h">{L_INDEX}</a> <!-- BEGIN navlinks --> <strong>&#8249;</strong> <a href="{navlinks.U_VIEW_FORUM}">{navlinks.FORUM_NAME}</a><!-- END navlinks --></li>
+			</ul>
+</div>
+<div id="q" class="user-info" onmouseover="show_quick();" onmouseout="hide_quick();">
+<h7 id="qtitle" style="color:#FFFFFF; font-weight: bold; width:100%; text-align:right;">QUICK</h7>
+<ul id="infobar" style="display:none; position:relative; margin-botoom:10px; top: 10px; height:auto;">
+<!-- IF S_DISPLAY_SEARCH or (S_USER_LOGGED_IN and not S_IS_BOT) -->
+	<!-- IF S_DISPLAY_SEARCH -->
+    	<!-- IF S_INC_UNREAD_LINK -->
+    		<!-- IF S_EXISTS_UNREADS -->
+        		<li style="text-align:right; font-weight:bold"><a href="{U_SEARCH_UNREAD}">{L_VIEW_UNREADS}</a></li>
+        	<!-- ELSE -->
+        		<li style="text-align:right"><a href="{U_SEARCH_UNREAD}">{L_NO_UNREADS}</a></li>
+        	<!-- ENDIF -->
+        <!-- ENDIF -->
+    	<li style="text-align:right; font-weight:bold"><a href="{U_SEARCH_NEW}">{L_SEARCH_NEW}</a></li>
+    <!-- ENDIF -->
+<!-- ENDIF -->
+<li>&nbsp;</li>
+<!-- IF S_DISPLAY_SEARCH or (S_USER_LOGGED_IN and not S_IS_BOT) -->
+	<!-- IF S_DISPLAY_SEARCH -->
+		<li style="text-align:right"><a href="{U_SEARCH_UNANSWERED}">{L_SEARCH_UNANSWERED}</a></li>
+        <li style="text-align:right"><a href="{U_SEARCH_ACTIVE_TOPICS}">{L_SEARCH_ACTIVE_TOPICS}</a></li>
+	<!-- ENDIF -->
+	<!-- IF not S_IS_BOT and U_MARK_FORUMS -->
+    <li style="text-align:right"><a href="{U_MARK_FORUMS}" accesskey="m">{L_MARK_FORUMS_READ}</a></li>
+    <!-- ENDIF -->
+	<!-- IF not S_IS_BOT and U_MARK_TOPICS -->
+    <li style="text-align:right"><a href="{U_MARK_TOPICS}" accesskey="m">{L_MARK_TOPICS_READ}</a></li>
+    <!-- ENDIF -->
+<!-- ENDIF -->
+<!-- IF not S_IS_BOT -->
+<!-- IF S_USER_LOGGED_IN -->
+			<li style="text-align:right"><a href="{U_PRIVATEMSGS}" title="Private Messages"><span>{PRIVATE_MESSAGE_INFO}</span></a></li>
+            <li style="text-align:right"><a href="{U_PROFILE}" title="{L_PROFILE}" accesskey="u"><span>{L_PROFILE}</span></a>
+            <!-- IF U_RESTORE_PERMISSIONS --> &bull;
+				<a href="{U_RESTORE_PERMISSIONS}"><span>{L_RESTORE_PERMISSIONS}</span></a>
+			<!-- ENDIF --></li>
+<!-- ENDIF -->
+<!-- ENDIF -->
+<!-- IF U_MCP -->
+<li style="text-align:right"><a href="{U_MCP}">{L_MCP}</a></li>
+<!-- ENDIF -->
+<!-- IF U_ACP -->
+<li style="text-align:right"><a href="{U_ACP}">{L_ACP}</a></li>
+<!-- ENDIF -->
+<!-- IF not S_IS_BOT -->
+<!-- IF S_USER_LOGGED_IN -->
+<li style="text-align:right"><a href="{U_LOGIN_LOGOUT}" title="{L_LOGIN_LOGOUT}" accesskey="l"><span>{L_LOGIN_LOGOUT}</span></a></li>
+<!-- ENDIF -->
+<!-- ENDIF -->
+</ul>
+</div>
+<div style="clear:both"></div>

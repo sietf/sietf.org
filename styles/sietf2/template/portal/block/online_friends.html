@@ -1,0 +1,26 @@
+<!-- $Id: online_friends.html,v 1.3 2007/08/08 04:50:13 angelside Exp $ //-->
+<div id="block_small_top" align="center">
+	<div class="s_block_left"></div>
+    <div class="s_block_right"></div>
+	<span style="color:#5f83c8; font-size:12px">{L_FRIENDS}</span>
+</div>
+<div class="block_small_bg" align="center">
+			<strong style="color:green">{L_FRIENDS_ONLINE}</strong><br />
+			<!-- BEGIN friends_online -->
+			<img src="portal/images/member.gif" /> {friends_online.USERNAME_FULL}<br /><br />				
+			<!-- BEGINELSE -->
+			{L_NO_FRIENDS_ONLINE}<br /><br />
+			<!-- END friends_online -->
+
+			<strong style="color:red">{L_FRIENDS_OFFLINE}</strong><br />
+			<!-- BEGIN friends_offline -->
+			<img src="portal/images/member.gif" /> {friends_offline.USERNAME_FULL}<br />
+			<!-- BEGINELSE -->
+			{L_NO_FRIENDS_OFFLINE}
+			<!-- END friends_offline -->
+</div>
+<div id="block_small_bottom">
+	<div class="s_block_left_b"></div>
+    <div class="s_block_right_b"></div>
+</div>
+<br style="clear:both" />

@@ -1,0 +1,55 @@
+*{
+	list-style:none;
+}
+#menucontainer{
+	position:relative;
+	height:50px;
+	color:#e2eaf2;
+	background:#e2eaf2;
+	width:100%;
+	}
+.menunav{
+	position:absolute;
+	top: 65px;
+	left: 100px;
+	height: 50px;
+	font-size:10px;
+	text-transform:uppercase;
+	width: auto;
+}
+	
+.menunav ul{
+	width: 100%;
+	margin:0;
+	padding:0;
+	list-style-type:none;
+	min-width: 950px;
+}
+
+.menunav ul li{
+	display:block;
+	width: 100px;
+	height: 20px;
+	float:left;
+	margin:0 1px;
+}
+
+.menunav ul li a{
+	display:block;
+	color:#fff;
+	text-align:center;
+	text-decoration:none;
+	font-weight:bold;
+	background-image:url("{T_THEME_PATH}/images/tabs/tab-back.png");
+	background-repeat: no-repeat;
+	height: 20px;
+	padding-top: 5px;
+}
+
+.menunav ul li a:hover{
+	background-image:url("{T_THEME_PATH}/images/tabs/tab2.png");
+	background-repeat:no-repeat;
+	height: 18px;
+	position:relative;
+	top:-3px;
+}

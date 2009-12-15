@@ -1,0 +1,29 @@
+<!-- $Id: news_compact.html,v 1.2 2007/08/08 04:50:13 angelside Exp $ //-->
+
+<div class="panel">
+	<div class="inner">
+		<span class="corners-top"><span></span></span>
+			<h3>{L_LATEST_NEWS}</h3>
+				<ul class="news">
+					<!-- BEGIN news_row -->
+					<!-- IF news_row.S_NO_TOPICS -->
+					<center><span class="gensmall"><strong>{L_NO_NEWS}</strong></span></center>
+					<!-- ELSE -->
+					<li>
+						<img src="{T_THEME_PATH}/images/arrow_right.gif" /> 
+						<a href="{news_row.U_VIEW_COMMENTS}"><strong style="font-size:1.1em;">{news_row.TITLE}</strong></a>
+						<br style="clear:both" />
+						<span style="float: left;">
+							<a href="{news_row.U_VIEW_COMMENTS}" title="{L_VIEW_COMMENTS}"><span style="font-size:0.9em;"><em>{L_COMMENTS}: {news_row.REPLIES}</em></span></a>
+							<span style="font-size:0.9em;"><em>{L_TOPIC_VIEWS}: {news_row.TOPIC_VIEWS}</em></span>
+						</span>
+						<span style="float: right;">{news_row.TIME}</span>
+						<br />
+					</li>
+					<!-- ENDIF -->
+					<!-- END news_row -->	
+				</ul>
+		<span class="corners-bottom"><span></span></span>
+	</div>
+</div>
+<br style="clear:both" />

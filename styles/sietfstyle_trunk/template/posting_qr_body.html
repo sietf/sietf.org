@@ -1,0 +1,56 @@
+<!-- IF S_USER_LOGGED_IN -->
+<form action="{U_POST_REPLY_TOPIC}" method="post" id="postform">
+  <div class="panel" id="postingbox">
+    <div class="inner">
+      <span class="corners-top"><span></span></span>
+      <h3>QUICK REPLY</h3>
+
+      <fieldset class="fields1">
+        <dl>
+          <dt><label for="subject">{L_SUBJECT}:</label></dt>
+          <dd>
+            <input type="text" name="subject" id="subject" style="width:80%"
+                maxlength="64" class="inputbox" value="Re: {TOPIC_TITLE}"
+                tabindex="1" />
+          </dd>
+        </dl>
+        <dl>
+          <dt><label for "message">{L_MESSAGE}:</label></dt>
+          <dd>
+            <div id="message-box">
+              <textarea name="message" id="message" rows="7" cols="15"
+                  class="inputbox" tabindex="2">{MESSAGE}</textarea>
+            </div>
+          </dd>
+        </dl>
+      </fieldset>
+
+      <fieldset class="submit-buttons">
+        <input type="hidden" name="icon" value="0" />
+
+        <input type="hidden" name="lastclick" value="<!-- PHP -->
+          echo time();
+        <!-- ENDPHP -->" />
+
+        <input type="hidden" name="topic_cur_post_id" value="<!-- PHP -->
+          global $post_list;
+          echo $post_list[count($post_list)-1];
+        <!-- ENDPHP -->" />
+
+        <!-- PHP -->
+          add_form_key('posting');
+        <!-- ENDPHP -->
+        {S_FORM_TOKEN}
+
+        <input type="submit" name="post" tabindex="5" value="{L_SUBMIT}"
+            class="button1" accesskey="s" />
+        <input type="submit" name="preview" tabindex="6" value="{L_PREVIEW}"
+            class="button2"
+            onclick="document.getElementById('postform').action += '#preview';" />
+        &nbsp;
+      </fieldset>
+
+      <span class="corners-bottom"><span></span></span></div>
+    </div>
+</form>
+<!-- ENDIF -->

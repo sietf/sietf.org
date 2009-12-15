@@ -1,0 +1,12 @@
+.radio_box {
+	color: #FFF;
+	width: 248px;
+	height: 26px;
+	position: absolute;
+	top: 0;
+	left: 400px;
+	background-repeat: no-repeat;
+	font-size: 15px;
+	padding-top: 3px;
+	padding-left: 27px;
+}

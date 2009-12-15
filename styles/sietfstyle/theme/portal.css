@@ -1,0 +1,127 @@
+/*sietf portal additional styles*/
+
+#contentwrapper{
+float: left;
+width: 100%;
+}
+
+#content_main { 
+	margin-left: 190px;
+	/*padding : 0;
+	/*width: auto;*/
+	/*margin-bottom: 4px;
+	margin-left: 190px;
+	/*position: absolute;*/
+	/*margin-right: 10px;
+	max-width: 1000px;*/
+}
+
+#content_sub {
+	float : left; 
+	width : 180px; 
+	margin-left: -100%; 
+}
+
+div.forabg p {
+	color:#000000;
+	text-indent: 5px;
+	font-size: 13px;
+}
+
+span.span-left{
+	color:#255289;
+	float : left; }
+	
+span.span-right{
+	float: right;
+	color:#255289;
+	font-weight:bold;
+	padding-right: 10px; }
+
+ul#nav-umenu a, ul#infobar a {
+	width : 100%;
+	color: #e2eaf2;
+	margin : 0;
+	padding : 0; }
+	
+ul#nav-umenu li, ul#infobar li {
+	text-align: center;
+	list-style-type: none;
+	/*margin : 0 5px;*/
+	padding : 0 10px; 
+	height: 14px;}
+	
+ul#nav-umenu li a, ul#infobar li a { display : block; }	
+	
+ul#nav-umenu li:hover, ul#nav-umenu li a:hover, ul#infobar li:hover, ul#infobar li a:hover { border-bottom: 0px solid #FFFFFF; color:#FF9900;}
+
+small.small-olist {
+	font-weight:bold;
+	color:#255289;
+	font-size:10px; }
+	
+fieldset.fieldset-jump {
+	float:right;
+	margin-bottom: 13px;
+	border:0; }
+	
+.umenu, .welcome, .friends, .whoisonline, .links, .latest-ann, .login, .birthday {
+	background-repeat:no-repeat;
+	background-position: center;
+	text-indent: -9999px;
+}
+
+.umenu {
+	background-image: url("{T_THEME_PATH}/images/titles/umenu.png");
+}
+
+.welcome {
+	background-image: url("{T_THEME_PATH}/images/titles/welcome.png");
+}
+
+.friends {
+	background-image: url("{T_THEME_PATH}/images/titles/friends.png");
+}
+
+.whoisonline {
+	background-image: url("{T_THEME_PATH}/images/titles/whoisonline.png");
+}
+
+.latest-ann {
+	background-image: url("{T_THEME_PATH}/images/titles/latest_ann.png");
+}
+
+.links {
+	background-image: url("{T_THEME_PATH}/images/titles/links.png");
+}
+
+.login {
+	background-image: url("{T_THEME_PATH}/images/titles/login.png");	
+}
+
+.birthday {
+	background-image: url("{T_THEME_PATH}/images/titles/birthday.png");	
+}
+
+.quick {
+	background-image: url("{T_THEME_PATH}/images/titles/quick.png");
+	background-repeat:no-repeat;
+	background-position: right;
+	margin-bottom: 5px;
+}
+
+.user-info {
+	position: relative;
+	float: right;
+	width: 100px;
+	padding: 0;
+    background-image: url("{T_THEME_PATH}/images/tabs/tabdown.png");
+	background-repeat: repeat-x;
+	margin-bottom: 6px;
+	position: ;
+	top: -18px;
+	text-align: center;
+	height: 20px;
+	z-index:999;
+}
+

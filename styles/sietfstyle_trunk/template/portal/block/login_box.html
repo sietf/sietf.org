@@ -1,0 +1,27 @@
+<!-- $Id: login_box.html,v 1.2 2007/08/08 04:50:13 angelside Exp $ //-->
+<form action="{S_LOGIN_ACTION}" method="post">
+<div class="forabg">
+<span class="corners-top"><span></span></span>
+<h4 class="login"><span>{L_LOGIN_LOGOUT}</span></h4><br />
+<center>
+			<small class="small-olist">{L_USERNAME}:</small><br />
+			<input type="text" tabindex="1" name="username" id="username" size="20" maxlength="40" value=""/><br /><br /> 
+			<small class="small-olist">{L_PASSWORD}:</small><br />
+			<input type="password" tabindex="2" id="password" name="password" size="20" maxlength="25"/> 
+		</center>
+		<!-- IF S_DISPLAY_FULL_LOGIN -->			
+			<br /><br />
+			<!-- IF S_AUTOLOGIN_ENABLED -->
+			<input type="checkbox" class="radio" name="autologin" tabindex="3" /> <small class="small-olist">{L_UM_LOG_ME_IN}</small><br />
+			<!-- ENDIF -->
+			<input type="checkbox" class="radio" name="viewonline" tabindex="4" /> <small class="small-olist">{L_UM_HIDE_ME}</small><br />
+		<!-- ENDIF -->		
+
+			<br />
+			<input type="hidden" name="redirect" value="http://www.sietf.org" />
+            <center>
+			<input type="submit" name="login" tabindex="6" value="{L_LOGIN}" class="button1" />		
+            </center>
+<span class="corners-bottom"><span></span></span>
+</div>
+</form>

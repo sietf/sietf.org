@@ -1,0 +1,28 @@
+<!-- $Id: news.html,v 1.2 2007/08/08 04:50:13 angelside Exp $ //-->
+<!--<h3>{L_LATEST_NEWS}</h3>-->
+
+<!-- BEGIN news_row -->
+<!-- IF news_row.S_NO_TOPICS -->
+	<center><span class="gensmall"><strong>{L_NO_NEWS}</strong></span></center>
+<!-- ELSE -->
+<div id="block_big_top">
+	<div class="b_block_left"></div>
+    <div class="b_block_right"></div>
+		<h4 class="first">{news_row.ATTACH_ICON_IMG}<!-- IF news_row.S_POLL --> <strong>{L_POLL}: </strong><!-- ENDIF --><a href="{news_row.U_VIEW_COMMENTS}"><strong style="padding-left:10px">{news_row.TITLE}</strong></a></h4>
+</div>
+    <div class="block_big_bg">
+			by <strong><a href="{news_row.U_USER_PROFILE}">{news_row.POSTER}</a> @ {news_row.TIME}</strong>
+			<!-- <li class="rightside">{news_row.TIME}</li> -->
+    <br />
+    <br />
+		{news_row.TEXT}
+    </div>	
+<div id="block_big_bottom">
+	<div class="b_block_left_b"></div>
+    <div class="b_block_right_b"></div>
+		<span>{L_TOPIC_VIEWS}: {news_row.TOPIC_VIEWS} &nbsp;&bull;&nbsp; <a href="{news_row.U_VIEW_COMMENTS}" title="{L_VIEW_COMMENTS}">{L_COMMENTS}: {news_row.REPLIES}</a> &nbsp;&bull;&nbsp; <a href="{news_row.U_POST_COMMENT}">{L_POST_REPLY}</a></span>
+		<span>{news_row.OPEN}<a href="{news_row.U_READ_FULL}">{news_row.L_READ_FULL}</a>{news_row.CLOSE}</span>
+    </div>
+<!-- ENDIF -->
+<!-- IF news_row.S_NOT_LAST --><!--<br />--><!-- ENDIF -->
+<!-- END news_row -->

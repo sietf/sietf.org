@@ -1,0 +1,21 @@
+{HEADER}
+<rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom">
+<channel>
+	<title>{TITLE}</title>
+	<description>{DESCRIPTION}</description>
+	<link>{LINK}</link>
+	<atom:link href="{FEED_LINK}" rel="self" type="application/rss+xml" />
+	<lastBuildDate>{LAST_BUILD}</lastBuildDate>
+
+	<!-- BEGIN item -->
+		<item>
+			<dc:creator>{item.AUTHOR}</dc:creator>
+			<pubDate>{item.TIME}</pubDate>
+			<guid>{item.IDENTIFIER}</guid>
+			<link>{item.LINK}</link>
+			<title>{item.TITLE}</title>
+			<description><![CDATA[{item.TEXT}]]></description>
+		</item>
+	<!-- END item -->
+</channel>
+</rss>

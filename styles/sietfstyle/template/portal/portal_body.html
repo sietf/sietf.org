@@ -1,0 +1,116 @@
+<!-- DEFINE $S_IN_PORTAL = 1 -->
+<!-- INCLUDE overall_header.html -->
+<!-- $Id: portal_body.html,v 1.4 2007/08/19 19:54:23 angelside Exp $ //-->
+<div id="maincontainer"> 
+<!-- [+] center block area -->
+<div id="contentwrapper"> 
+	<div id="content_main">
+		<!-- IF S_DISPLAY_WELCOME -->
+			<!-- INCLUDE portal/block/welcome.html -->
+		<!-- ENDIF -->
+
+		<!-- IF S_ADS_CENTER -->
+			<!-- INCLUDE portal/block/ads_center.html -->
+		<!-- ENDIF -->
+		
+		<!-- IF S_DISPLAY_PAY_C -->
+			<!-- INCLUDE portal/block/donation/donation.html -->
+		<!-- ENDIF -->
+
+		<!-- IF S_DISPLAY_RECENT -->
+			<!-- INCLUDE portal/block/recent.html -->
+		<!-- ENDIF -->			
+
+		<!-- IF S_DISPLAY_POLL and S_HAS_POLL -->
+			<!-- INCLUDE portal/block/poll.html -->
+		<!-- ENDIF -->		
+
+		<!-- IF S_DISPLAY_ANNOUNCEMENTS -->
+		<!-- IF S_ANNOUNCE_COMPACT -->
+			<!-- INCLUDE portal/block/announcements_compact.html -->
+		<!-- ELSE -->
+			<!-- INCLUDE portal/block/announcements.html -->
+		<!-- ENDIF -->
+		<!-- ENDIF -->
+		
+		<!-- IF S_DISPLAY_NEWS -->
+		<!-- IF S_NEWS_COMPACT -->
+			<!-- INCLUDE portal/block/news_compact.html -->
+		<!-- ELSE -->
+			<!-- INCLUDE portal/block/news.html -->
+		<!-- ENDIF -->
+		<!-- ENDIF -->
+
+		<!-- IF S_DISPLAY_WORDGRAPH -->
+			<!-- INCLUDE portal/block/wordgraph.html -->
+		<!-- ENDIF -->
+		
+		<!-- IF S_DISPLAY_JUMPBOX -->
+			<!-- INCLUDE portal/block/jumpbox.html -->
+		<!-- ENDIF -->	
+
+	</div>
+    </div>
+<!-- [+] left block area -->
+    <div id="content_sub">
+		<!-- IF not S_USER_LOGGED_IN -->
+		<!-- INCLUDE portal/block/login_box.html -->
+		<!-- ENDIF -->
+
+		<!-- IF S_USER_LOGGED_IN -->
+		<!-- INCLUDE portal/block/user_menu.html -->
+		<!-- ENDIF -->
+
+		<!-- IF S_DISPLAY_FRIENDS and S_ZEBRA_ENABLED and S_USER_LOGGED_IN -->
+		<!-- INCLUDE portal/block/online_friends.html -->
+		<!-- ENDIF -->
+        
+                <!-- IF S_DISPLAY_BIRTHDAY_LIST and BIRTHDAY_LIST -->
+            <!-- INCLUDE portal/block/birthday_list.html -->
+        <!-- ENDIF -->
+        
+		<!-- IF S_DISPLAY_ONLINE_LIST -->
+		<!-- INCLUDE portal/block/whois_online.html -->
+		<!-- ENDIF -->
+		
+		<!-- IF S_ADS_SMALL -->
+			<!-- INCLUDE portal/block/ads_small.html -->
+		<!-- ENDIF -->
+	
+		<!-- IF S_DISPLAY_CHANGE_STYLE -->
+			<!-- INCLUDE portal/block/change_style.html -->
+		<!-- ENDIF -->
+		
+		<!-- IF S_DISPLAY_PAY_S -->
+			<!-- INCLUDE portal/block/donation/donation_small.html -->
+		<!-- ENDIF -->
+
+		<!-- IF S_DISPLAY_TOP_POSTERS -->
+			<!-- INCLUDE portal/block/top_poster.html -->
+		<!-- ENDIF -->
+        
+
+		<!-- IF S_DISPLAY_LINKS -->
+			<!-- INCLUDE portal/block/links.html -->
+		<!-- ENDIF -->		
+       
+
+		<!-- IF S_DISPLAY_CLOCK -->
+			<!-- INCLUDE portal/block/clock.html -->
+		<!-- ENDIF -->
+
+		<!-- IF S_DISPLAY_LINK_US -->
+			<!-- INCLUDE portal/block/link_us.html -->
+		<!-- ENDIF -->		
+
+		<!-- IF S_DISPLAY_LAST_BOTS and S_LAST_VISITED_BOTS -->
+			<!-- INCLUDE portal/block/latest_bots.html -->
+		<!-- ENDIF -->
+       
+		<!-- IF S_DISPLAY_LATEST_MEMBERS -->
+			<!-- INCLUDE portal/block/latest_members.html -->
+		<!-- ENDIF -->
+	</div>
+<!-- [-] left block area -->
+</div>
+<!--// phpBB3 Portal by Sevdin Filiz, www.phpbb3portal.com //-->

@@ -1,0 +1,13 @@
+DirectoryIndex index.html portal.php index.php index.htm
+
+# php_value mbstring.func_overload 7
+php_value upload_max_filesize 10M
+<Files "config.php">
+Order Allow,Deny
+Deny from All
+</Files>
+
+<Files "common.php">
+Order Allow,Deny
+Deny from All
+</Files>

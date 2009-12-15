@@ -1,0 +1,25 @@
+<!-- $Id: online_friends.html,v 1.3 2007/08/08 04:50:13 angelside Exp $ //-->
+<div class="forabg">
+<span class="corners-top"><span></span></span>
+<h4 class="friends"><span>{L_FRIENDS}</span></h4><br />
+<div style="text-align: center">
+			<strong style="color:green">{L_FRIENDS_ONLINE}</strong><br />
+            <ul id="nav-umenu">
+			<!-- BEGIN friends_online -->
+			<li>{friends_online.USERNAME_FULL}</li>			
+			<!-- BEGINELSE -->
+			{L_NO_FRIENDS_ONLINE}
+			<!-- END friends_online -->
+            </ul>
+			<br /><br />
+			<strong style="color:red">{L_FRIENDS_OFFLINE}</strong><br />
+            <ul id="nav-umenu">
+			<!-- BEGIN friends_offline -->
+			<li>{friends_offline.USERNAME_FULL}</li>
+			<!-- BEGINELSE -->
+			{L_NO_FRIENDS_OFFLINE}
+			<!-- END friends_offline -->
+            </ul>
+            </div>
+<span class="corners-bottom"><span></span></span>
+</div>
